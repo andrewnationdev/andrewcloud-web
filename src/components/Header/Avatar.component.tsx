@@ -1,7 +1,7 @@
 export default function AvatarComponent() {
     return (
         <div className="chip">
-            <img src="images/yuna.jpg" alt="Contact Person" />
+            <img src="https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1" alt="Contact Person" />
             Jane Doe
         </div>
     );
