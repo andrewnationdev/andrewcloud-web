@@ -7,6 +7,7 @@ export default function HeaderComponent(){
         <>
             <AppLogoComponent/>
             <SearchComponent/>
+            
             <AvatarComponent/>
         </>
     );
