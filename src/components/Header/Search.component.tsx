@@ -6,7 +6,6 @@ export default function SearchComponent() {
                     <div className="input-field col s6">
                         <i className="material-icons prefix">search</i>
                         <textarea className="materialize-textarea"></textarea>
-                        <label>Procurar arquivo</label>
                     </div>
                 </div>
             </form>
