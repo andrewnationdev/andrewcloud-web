@@ -1,7 +1,7 @@
-export default function AppLogoComponent(/assets/logo.png){
+export default function AppLogoComponent(){
     return(
         <>
-            <img src="" alt="AndrewCloudlogo" />
+            <img src="/assets/logo.png" alt="AndrewCloudlogo" />
             <span>AndrewCloud</span>
         </>
     );
