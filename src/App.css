@@ -41,4 +41,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px dashed #1565c0;
 }
