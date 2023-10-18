@@ -43,5 +43,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px dashed #1565c0;
+  height: 80px;
+  border-bottom: 3px solid #1565c00a;
 }
