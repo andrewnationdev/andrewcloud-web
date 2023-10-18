@@ -7,8 +7,8 @@ export default function HeaderComponent(){
         <>
             <AppLogoComponent/>
             <SearchComponent/>
-
             <a className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></a>
+            <a className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">settings</i></a>
             <AvatarComponent/>
         </>
     );
