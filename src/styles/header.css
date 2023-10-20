@@ -1,14 +1,29 @@
 .app-logo {
-    width: 56px;
-    height: 56px;
-    size: 25px;
+    width: 46px;
+    height: 46px;
+    transition: filter 500ms;
 }
 
 .app-logo-text {
     color: #1565c0;
-    font-size: 20px;
+    font-size: 25px;
+    visibility: hidden;
+    transition: visibility 500ms;
 }
 
 .search-field {
-    width: 300px;
+    width: 300px !important;
+}
+
+.app-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo-container:hover > .app-logo-text {
+    visibility: visible;
+}
+
+.app-logo-container:hover > .app-logo {
+    filter: saturate(125%);
 }
