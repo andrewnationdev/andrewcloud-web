@@ -1,12 +1,16 @@
 .sidebar-container {
-    width: 10vw;
+    border-right: 2px solid #add8e6;
     height: 50vh;
-    border-right: 2px solid lightblue;
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 24vw;
 }
 
 meter {
     width: 80%;
-    height: 20px;
+    height: 25px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
