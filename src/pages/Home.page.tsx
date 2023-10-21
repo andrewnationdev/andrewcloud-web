@@ -1,11 +1,17 @@
 import HeaderComponent from '../components/Header/Header.component';
 import SidebarComponent from '../components/Sidebar/Sidebar.component';
+import FileCardComponent from '../components/FileArea/FileCard.component';
 
 export default function HomePage(){
     return(
         <>
             <HeaderComponent/>
-            <SidebarComponent/>
+            <div style={{
+                display: "flex"
+            }}>
+                <SidebarComponent/>
+                <FileCardComponent/>
+            </div>
         </>
     );
 }
