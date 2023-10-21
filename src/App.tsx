@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/Home.page';
@@ -7,8 +7,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 function App() {
   const queryClient = new QueryClient();
-  
-  const { data, isLoading, isError, refetch } = useQuery('global-query', fetchData);
+
+  const { data, isLoading, isError, refetch } = useQuery('global-query', () => {});
   
   return (
     <QueryClientProvider client={queryClient}>
