@@ -10,7 +10,7 @@ interface IStoreActions {
 
 const useFileStore = create<{data: IFiles} & IStoreActions>((set) => ({
     data: {
-        none: string
+        none: ''
     },
     updateData: (newData) => {
         set((s) => ({ data: { ...s.data, ...newData } }));
