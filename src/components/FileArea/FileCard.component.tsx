@@ -5,11 +5,10 @@ export default function FileCardComponent() {
                 <div className="card">
                     <div className="card-image">
                         <img src="images/sample-1.jpg" />
-                        <span className="card-title">Card Title</span>
-                        <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
+                        <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">more_horiz</i></a>
                     </div>
                     <div className="card-content">
-                        <p contenteditable>meuarquivo.txt</p>
+                        <p contentEditable>meuarquivo.txt</p>
                     </div>
                 </div>
             </div>
