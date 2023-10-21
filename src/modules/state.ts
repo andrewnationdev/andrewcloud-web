@@ -7,7 +7,7 @@ interface IFiles {
 }
 
 interface IStoreActions {
-  updateData: (newData: IAPIResponse) => void;
+  updateData: (newData: IFiles) => void;
 }
 
 const useFileStore = create<{data: IFiles} & IStoreActions>((set) => ({
