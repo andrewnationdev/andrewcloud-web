@@ -10,7 +10,23 @@ export default function HomePage(){
                 display: "flex"
             }}>
                 <SidebarComponent/>
-                <FileCardComponent/>
+                <div style={{
+                    display: "flex",
+                    flexWrap: "wrap"
+                }}>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                    <FileCardComponent/>
+                </div>
             </div>
         </>
     );
