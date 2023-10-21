@@ -7,8 +7,7 @@
 .app-logo-text {
     color: #1565c0;
     font-size: 25px;
-    visibility: hidden;
-    transition: visibility 500ms;
+    font-weight: 600;
 }
 
 .search-field {
@@ -18,10 +17,7 @@
 .app-logo-container {
     display: flex;
     align-items: center;
-}
-
-.app-logo-container:hover > .app-logo-text {
-    visibility: visible;
+    gap: 1rem;
 }
 
 .app-logo-container:hover > .app-logo {
