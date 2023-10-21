@@ -24,8 +24,6 @@ function App() {
     }
   ]
 
-  const routes = [...routes];
-
   return (
     <div className="App">
       <Router routes={routes} />
