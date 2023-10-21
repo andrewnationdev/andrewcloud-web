@@ -1,9 +1,7 @@
 import create from 'zustand';
 
 interface IFiles {
-    data: {
-        none: string;
-    }
+    none: string;
 }
 
 interface IStoreActions {
