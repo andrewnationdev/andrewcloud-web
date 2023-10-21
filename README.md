@@ -1,8 +1,8 @@
 # TODO
 
-- Adicionar Zustand e configurar ReactQuery
+- ~~Adicionar Zustand e configurar ReactQuery~~
 - Criar tela de login
-- criar JSON com usuários
+- ~~criar JSON com usuários~~
 - Adicionar a funcionalidade de enviar arquivos
 - Contabilizar a quantidade de armazenamento usada
 - Menu de informações do arquivo
