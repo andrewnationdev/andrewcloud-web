@@ -7,12 +7,14 @@ export default function HomePage(){
         <>
             <HeaderComponent/>
             <div style={{
-                display: "flex"
+                display: "flex",
             }}>
                 <SidebarComponent/>
                 <div style={{
                     display: "flex",
-                    flexWrap: "wrap"
+                    flexWrap: "wrap",
+                    maxHeight: "calc(100vh - 80px)",
+                    overflowY: "scroll"
                 }}>
                     <FileCardComponent/>
                     <FileCardComponent/>
