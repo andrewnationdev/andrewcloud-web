@@ -34,7 +34,7 @@ export default function LoginScreen() {
         if (authenticated) {
             navigate("/files");
         } else {
-            setError("Login ou senha incorretos. Tente novamente");
+            Notify("Login ou senha incorretos. Tente novamente");
         }
     }
 
@@ -63,7 +63,7 @@ export default function LoginScreen() {
                             </div>
                         </div>
                     </form>
-                    <span>{error}</span>
+                    
                     <div className="login-button-container">
                         <a className="waves-effect waves-light btn blue darken-3"
                             onClick={() => LogUserIn({ login: email, password })}
