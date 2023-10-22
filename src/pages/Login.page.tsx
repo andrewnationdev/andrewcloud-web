@@ -31,7 +31,7 @@ export default function LoginScreen() {
                 }
         }
 
-        console.log(authenticated, credentials, users);c
+        console.log(authenticated, credentials, users);
 
         if (authenticated) {
             navigate("/files");
