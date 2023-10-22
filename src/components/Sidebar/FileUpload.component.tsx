@@ -35,7 +35,7 @@ export default function FileUploadComponent() {
 
         const files = [...data.files, {
             name: file!.name,
-            blob: new Blob(file),
+            blob: new Blob(file!),
             size: file!.size,
             lastModifiedDate: file!.lastModifiedDate,
             type: file!.type
