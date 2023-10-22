@@ -31,17 +31,17 @@ const icons: TFileIcon[] = [
       color: "",
     },
     {
-      icon: "",
+      icon: "image",
       type: "image/png",
       color: "",
     },
     {
-      icon: "",
+      icon: "image",
       type: "image/jpeg",
       color: "",
     },
     {
-      icon: "",
+      icon: "image",
       type: "image/gif",
       color: "",
     },
@@ -51,7 +51,7 @@ const icons: TFileIcon[] = [
       color: "",
     },
     {
-      icon: "",
+      icon: "video_library",
       type: "video/mpeg",
       color: "",
     },
@@ -71,7 +71,7 @@ const icons: TFileIcon[] = [
       color: "",
     },
     {
-        icon: "",
+        icon: "folder",
         type: "folder",
         color: ""
     }
