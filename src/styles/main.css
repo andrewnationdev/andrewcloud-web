@@ -40,10 +40,18 @@ meter {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: 1.5rem;
 }
 
 .login-button-container {
     display: flex;
     gap: 12px;
+}
+
+.login-form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
 }

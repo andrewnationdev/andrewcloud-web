@@ -42,7 +42,7 @@ export default function LoginScreen() {
         <div className="login-page">
             <div className="col login-container">
                 <AppLogo />
-                <div className="row">
+                <div className="row login-form-area">
                     <form className="col s12">
                         <div className="row">
                             <div className="input-field col s12">
