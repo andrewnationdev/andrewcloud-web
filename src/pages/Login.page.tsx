@@ -2,9 +2,15 @@ import { IUser } from '../types/user';
 import React, { useState } from 'react';
 import AppLogo from '../components/Header/AppLogo.component';
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [error, setError] = useState<string>("");
+
+    const navigate = useNavigate();
 
     const { data, isLoading, isError, refetch } = useQuery('login-query', async () => {
         const request = await fetch("/users/users.json");
@@ -13,35 +19,53 @@ export default function LoginScreen() {
         setUsers(JSON.parse(res as unknown as string)!.users as IUser[]);
     });
 
+    const LogUserIn = (credentials: IUser): boolean => {
+        let authenticated: boolean = false;
+
+        for(let i = 0; i < users.length; i++){
+            if(user.login == credentials.login)
+                if(user.password == credentials.password){
+                    authenticated = true;
+                    break;
+                }
+        }
+
+        return authenticated;
+    }
+
     return (<div className="col">
         <AppLogo />
         <div className="row">
             <form className="col s12">
                 <div className="row">
                     <div className="input-field col s12">
-                        <input id="email" type="email" className="validate" />
+                        <input id="email" type="email" className="validate"
+                            value={email}
+                            onChange={(e) => setEmail(e?.target?.value)}
+                        />
                         <label htmlFor="email">Email</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
-                        <input id="password" type="password" className="validate" />
+                        <input id="password" type="password" className="validate" 
+                            value={password}
+                            onChange={(e) => setPassword(e?.target?.value)}
+                        />
                         <label htmlFor="password">Password</label>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col s12">
-                        This is an inline input field:
-                        <div className="input-field inline">
-                            <input id="email_inline" type="email" className="validate" />
-                            <label htmlFfor="email_inline">Email</label>
-                            <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                        </div>
-                    </div>
-                </div>
-
             </form>
-            <a class="waves-effect waves-light btn-large">Entrar</a>
+            <span>{error}</span>
+            <a class="waves-effect waves-light btn-large" onClick={() => {
+                const logged = LogUserIn();
+
+                if(logged){
+                    navigate("/files");
+                } else {
+                    setError("Login ou senha incorretos. Tente novamente");
+                }
+            }}>Entrar</a>
             <a class="waves-effect waves-light btn-large">Cadastrar</a>
         </div>
 
