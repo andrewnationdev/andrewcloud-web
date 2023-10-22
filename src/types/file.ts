@@ -1,3 +1,3 @@
-interface IFile {
+export interface IFile {
     
 }
