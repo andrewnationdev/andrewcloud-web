@@ -24,14 +24,12 @@ export default function LoginScreen() {
         let authenticated: boolean = false;
 
         for (let i = 0; i < users.length; i++) {
-            if (users[i].login == credentials.login &&
-                users[i].password == credentials.password) {
+            if (users[i].login === credentials.login &&
+                users[i].password === credentials.password) {
                     authenticated = true;
                     break;
                 }
         }
-
-        console.log(authenticated, credentials, users);
 
         if (authenticated) {
             navigate("/files");
