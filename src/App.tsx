@@ -30,9 +30,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <ToastContainer>
-          <Router routes={routes} />
-        </ToastContainer>    
+        <ToastContainer/>
+          <Router routes={routes} />  
       </BrowserRouter>
     </div>
   );
