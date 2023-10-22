@@ -1,6 +1,9 @@
 import {IFile} from '../../types/file';
+import {getFileIcon, TFileIcon} from '../../utils/icons';
 
 export default function FileCardComponent(props: IFile) {
+    const icon: TFileIcon = getFileIcon(prop?.type);
+
     return (
         <div className="row">
             <div className="col">
@@ -8,7 +11,10 @@ export default function FileCardComponent(props: IFile) {
                     width: "200px"
                 }}>
                     <div className="card-image">
-                        <img src="https://th.bing.com/th/id/OIP.VSn6cLf_0p4Y4W9dZktozAHaJz?pid=ImgDet&rs=1" />
+                        <i style={{
+                            color: icon?.color,
+                            fontSize: '3rem'
+                        }}>{props?.icon}</i>
                         <a className="btn-floating halfway-fab waves-effect waves-light blue darken-4"><i className="material-icons">more_horiz</i></a>
                     </div>
                     <div className="card-content">

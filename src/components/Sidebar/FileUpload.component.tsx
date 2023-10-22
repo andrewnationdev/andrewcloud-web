@@ -51,9 +51,7 @@ export default function FileUploadComponent() {
             })
         };
         reader.readAsArrayBuffer(file!);
-
     }
-
 
     useEffect(() => {
         console.log(file);
@@ -65,7 +63,7 @@ export default function FileUploadComponent() {
     return (
         <>
             <a className="waves-effect waves-light btn light-blue accent-3"
-                onClick={() => document.getElementById('avatar')?.click()}
+                onClick={() => document.getElementById('files')?.click()}
             >
                 <i className="material-icons left">archive</i>
                 Enviar arquivo
@@ -77,7 +75,7 @@ export default function FileUploadComponent() {
 
                 if (file) setFile(file)
                 /** adicionar mensagem de erro */
-            }} id="avatar" hidden name="avatar" accept="image/png, image/jpeg" />
+            }} id="file" hidden name="files" />
         </>
     )
 }
