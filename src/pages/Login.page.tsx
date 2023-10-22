@@ -57,7 +57,7 @@ export default function LoginScreen() {
                 </div>
             </form>
             <span>{error}</span>
-            <a class="waves-effect waves-light btn-large" onClick={() => {
+            <a class="waves-effect waves-light btn-large  blue darken-3" onClick={() => {
                 const logged = LogUserIn();
 
                 if(logged){
