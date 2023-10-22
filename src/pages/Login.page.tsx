@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import AppLogo from '../components/Header/AppLogo.component';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
+import '../main.css';
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -37,7 +38,7 @@ export default function LoginScreen() {
         }
     }
 
-    return (<div className="col">
+    return (<div className="col login-container">
         <AppLogo />
         <div className="row">
             <form className="col s12">
