@@ -11,7 +11,9 @@ export default function FileCardComponent(props: IFile) {
                     width: "200px"
                 }}>
                     <div className="card-image">
-                        <i style={{
+                        <i 
+                        className="material-icons"
+                        style={{
                             color: icon?.color,
                             fontSize: '3rem'
                         }}>{icon?.icon}</i>
