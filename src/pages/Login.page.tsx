@@ -26,9 +26,9 @@ export default function LoginScreen() {
         for (let i = 0; i < users.length; i++) {
             if (users[i].login === credentials.login &&
                 users[i].password === credentials.password) {
-                    authenticated = true;
-                    break;
-                }
+                authenticated = true;
+                break;
+            }
         }
 
         if (authenticated) {
@@ -38,35 +38,39 @@ export default function LoginScreen() {
         }
     }
 
-    return (<div className="col login-container">
-        <AppLogo />
-        <div className="row">
-            <form className="col s12">
+    return (
+        <div className="login-page">
+            <div className="col login-container">
+                <AppLogo />
                 <div className="row">
-                    <div className="input-field col s12">
-                        <input id="email" type="email" className="validate"
-                            value={email}
-                            onChange={(e) => setEmail(e?.target?.value)}
-                        />
-                        <label htmlFor="email">Email</label>
-                    </div>
+                    <form className="col s12">
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="email" type="email" className="validate"
+                                    value={email}
+                                    onChange={(e) => setEmail(e?.target?.value)}
+                                />
+                                <label htmlFor="email">Email</label>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="password" type="password" className="validate"
+                                    value={password}
+                                    onChange={(e) => setPassword(e?.target?.value)}
+                                />
+                                <label htmlFor="password">Password</label>
+                            </div>
+                        </div>
+                    </form>
+                    <span>{error}</span>
+                    <a className="waves-effect waves-light btn blue darken-3"
+                        onClick={() => LogUserIn({ login: email, password })}
+                    >Entrar</a>
+                    <a className="waves-effect waves-light btn blue darken-3">
+                        Cadastrar
+                    </a>
                 </div>
-                <div className="row">
-                    <div className="input-field col s12">
-                        <input id="password" type="password" className="validate"
-                            value={password}
-                            onChange={(e) => setPassword(e?.target?.value)}
-                        />
-                        <label htmlFor="password">Password</label>
-                    </div>
-                </div>
-            </form>
-            <span>{error}</span>
-            <a className="waves-effect waves-light btn-large blue darken-3" 
-                onClick={() => LogUserIn({login: email, password})}
-            >Entrar</a>
-            <a className="waves-effect waves-light btn-large blue darken-3">Cadastrar</a>
-        </div>
-
-    </div>)
+            </div>
+        </div>)
 }
