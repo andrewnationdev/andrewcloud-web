@@ -32,6 +32,14 @@ export default function FileUploadComponent() {
                 setUploadProgress(progress);
             }
         }, uploadInterval);
+
+        const files = [...data.files, file];
+
+        updateData({
+            ...data,
+            files: files,
+            storageQuota: data.storageQuota + uploadSize
+        })
     }
 
 
@@ -39,10 +47,6 @@ export default function FileUploadComponent() {
         console.log(file);
         if(file) {
             simulateUpload();
-            updateData({
-                ...data,
-                storageQuota: data.storageQuota + uploadSize
-            })
         }
     }, [file])
 
