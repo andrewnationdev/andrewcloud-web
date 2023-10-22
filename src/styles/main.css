@@ -38,4 +38,10 @@ meter {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
+}
+
+.login-button-container {
+    display: flex;
+    gap: 12px;
 }

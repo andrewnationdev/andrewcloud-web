@@ -64,12 +64,14 @@ export default function LoginScreen() {
                         </div>
                     </form>
                     <span>{error}</span>
-                    <a className="waves-effect waves-light btn blue darken-3"
-                        onClick={() => LogUserIn({ login: email, password })}
-                    >Entrar</a>
-                    <a className="waves-effect waves-light btn blue darken-3">
-                        Cadastrar
-                    </a>
+                    <div className="login-button-container">
+                        <a className="waves-effect waves-light btn blue darken-3"
+                            onClick={() => LogUserIn({ login: email, password })}
+                        >Entrar</a>
+                        <a className="waves-effect waves-light btn blue darken-3">
+                            Cadastrar
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>)
