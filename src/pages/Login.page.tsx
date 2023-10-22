@@ -61,7 +61,9 @@ export default function LoginScreen() {
                 </div>
             </form>
             <span>{error}</span>
-            <a className="waves-effect waves-light btn-large blue darken-3" onClick={LogUserIn}>Entrar</a>
+            <a className="waves-effect waves-light btn-large blue darken-3" 
+                onClick={() => LogUserIn({email, password})}
+            >Entrar</a>
             <a className="waves-effect waves-light btn-large blue darken-3">Cadastrar</a>
         </div>
 
