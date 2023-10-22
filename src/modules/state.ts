@@ -2,7 +2,7 @@ import create from 'zustand';
 import {IFile} from '../types/file';
 
 interface IStoreActions {
-  updateData: (newData: IFile) => void;
+  updateData: (newData: IAndrewCloud) => void;
 }
 
 interface IAndrewCloud {
