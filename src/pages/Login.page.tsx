@@ -41,6 +41,7 @@ export default function LoginScreen() {
                 </div>
 
             </form>
+            <a class="waves-effect waves-light btn-large">Button</a>
         </div>
 
     </div>)
