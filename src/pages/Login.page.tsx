@@ -1,6 +1,7 @@
 import { IUser } from '../types/user';
 import React, { useState } from 'react';
 import AppLogo from '../components/Header/AppLogo.component';
+import { useQuery } from 'react-query';
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -32,9 +33,9 @@ export default function LoginScreen() {
                     <div className="col s12">
                         This is an inline input field:
                         <div className="input-field inline">
-                            <input id="email_inline" type="email" className="validate"/>
-                                <label for="email_inline">Email</label>
-                                <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                            <input id="email_inline" type="email" className="validate" />
+                            <label for="email_inline">Email</label>
+                            <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
                         </div>
                     </div>
                 </div>
