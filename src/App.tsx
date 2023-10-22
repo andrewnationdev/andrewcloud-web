@@ -5,6 +5,7 @@ import HomePage from './pages/Home.page';
 import LoginScreen from './pages/Login.page';
 import { useQuery } from 'react-query';
 import Router from 'react-easy-router';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const { data, isLoading, isError, refetch } = useQuery('global-query', () => { });
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router routes={routes} />
+      <BrowserRouter><Router routes={routes} /></BrowserRouter>
     </div>
   );
 }
