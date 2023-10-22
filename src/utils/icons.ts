@@ -77,7 +77,7 @@ const icons: TFileIcon[] = [
     }
   ];
 
-export function getFileIcons(type: string): TFileIcon {
+export function getFileIcon(type: string): TFileIcon {
     for(let i = 0; i < icons.length; i++){
         if(icons[i].type == type){
             return icons[i];
