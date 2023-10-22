@@ -10,7 +10,7 @@ export default function FileUploadComponent() {
         const totalSteps = 20; 
         const uploadInterval = 500; 
 
-        const fileSize = file!.size; 
+        const fileSize = file!.size!; 
 
         setUploadSize(fileSize);
 
@@ -34,7 +34,7 @@ export default function FileUploadComponent() {
 
     useEffect(() => {
         console.log(file);
-        simulateUpload();
+        if(file) simulateUpload();
     }, [file])
 
     return (
