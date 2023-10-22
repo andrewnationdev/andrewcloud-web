@@ -66,7 +66,7 @@ export default function LoginScreen() {
                     setError("Login ou senha incorretos. Tente novamente");
                 }
             }}>Entrar</a>
-            <a class="waves-effect waves-light btn-large">Cadastrar</a>
+            <a class="waves-effect waves-light btn-large  blue darken-3">Cadastrar</a>
         </div>
 
     </div>)
