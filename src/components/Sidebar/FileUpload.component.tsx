@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import useFileStore from '../../modules/state';
 
 export default function FileUploadComponent() {
     const [file, setFile] = useState<File | null>(null);
     const [uploadProgress, setUploadProgress] = useState<number>(0);
     const [uploadSize, setUploadSize] = useState(0);
     const [timeEstimate, setTimeEstimate] = useState('Calculando tempo estimado...');
+
+    const {data, updateData} = useFileStore();
 
     const simulateUpload = () => {
         const totalSteps = 20; 
@@ -34,7 +37,13 @@ export default function FileUploadComponent() {
 
     useEffect(() => {
         console.log(file);
-        if(file) simulateUpload();
+        if(file) {
+            simulateUpload();
+            updateData({
+                ...data,
+                storageQuota: data.storageQuota + uploadSize
+            })
+        }
     }, [file])
 
     return (

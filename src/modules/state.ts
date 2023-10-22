@@ -1,16 +1,23 @@
 import create from 'zustand';
-
-interface IFiles {
-    none: string;
-}
+import {IFile} from '../types/file';
 
 interface IStoreActions {
-  updateData: (newData: IFiles) => void;
+  updateData: (newData: IFile) => void;
 }
 
-const useFileStore = create<{data: IFiles} & IStoreActions>((set) => ({
+interface IAndrewCloud {
+  user: string;
+  avatar: string;
+  files: IFile[];
+  storageQuota: number;
+}
+
+const useFileStore = create<{data: IAndrewCloud } & IStoreActions>((set) => ({
     data: {
-        none: ''
+        user: '',
+        avatar: '',
+        files: [],
+        storageQuota: 0
     },
     updateData: (newData) => {
         set((s) => ({ data: { ...s.data, ...newData } }));

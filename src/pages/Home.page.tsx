@@ -1,8 +1,11 @@
 import HeaderComponent from '../components/Header/Header.component';
 import SidebarComponent from '../components/Sidebar/Sidebar.component';
 import FileCardComponent from '../components/FileArea/FileCard.component';
+import useFileStore from '../modules/state';
 
 export default function HomePage(){
+    const {data, updateData} = useFileStore();
+
     return(
         <>
             <HeaderComponent/>
@@ -16,18 +19,10 @@ export default function HomePage(){
                     maxHeight: "calc(100vh - 80px)",
                     overflowY: "scroll"
                 }}>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
-                    <FileCardComponent/>
+                    {data?.files?.length > 0 && data?.files?.map((file) => 
+                        <FileCardComponent/>
+                    )}
+                    {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}
                 </div>
             </div>
         </>
