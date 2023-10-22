@@ -34,7 +34,7 @@ export default function FileUploadComponent() {
         }, uploadInterval);
 
         const files = [...data.files, {
-            name: file!.filename,
+            name: file!.name,
             blob: file!.blob,
             size: file!.size,
             lastModifiedDate: file!.lastModifiedDate,
