@@ -7,13 +7,13 @@ export default function FileUploadComponent() {
     const [uploadSize, setUploadSize] = useState(0);
     const [timeEstimate, setTimeEstimate] = useState('Calculando tempo estimado...');
 
-    const {data, updateData} = useFileStore();
+    const { data, updateData } = useFileStore();
 
     const simulateUpload = () => {
-        const totalSteps = 20; 
-        const uploadInterval = 125; 
+        const totalSteps = 20;
+        const uploadInterval = 125;
 
-        const fileSize = file!.size!; 
+        const fileSize = file!.size!;
 
         setUploadSize(fileSize);
 
@@ -33,25 +33,31 @@ export default function FileUploadComponent() {
             }
         }, uploadInterval);
 
-        const files = [...data.files, {
-            name: file!.name,
-            blob: new Blob(file!),
-            size: file!.size,
-            lastModifiedDate: file!.lastModifiedDate,
-            type: file!.type
-        }];
+        const reader = new FileReader();
+        reader.onload = () => {
+            const blobPart = reader.result;
+            const files = [...data.files, {
+                name: file!.name,
+                blob: blobPart,
+                size: file!.size,
+                lastModifiedDate: file!.lastModifiedDate,
+                type: file!.type,
+            }];
 
-        updateData({
-            ...data,
-            files: files,
-            storageQuota: data.storageQuota + uploadSize
-        })
+            updateData({
+                ...data,
+                files: files,
+                storageQuota: data.storageQuota + uploadSize
+            })
+        };
+        reader.readAsArrayBuffer(file!);
+
     }
 
 
     useEffect(() => {
         console.log(file);
-        if(file) {
+        if (file) {
             simulateUpload();
         }
     }, [file])
