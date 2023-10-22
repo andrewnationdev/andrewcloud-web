@@ -10,7 +10,7 @@ export default function LoginScreen() {
         const request = await fetch("/users/users.json");
         const res = request.text();
 
-        setUsers(JSON.parse(res)!.users as IUser);
+        setUsers(JSON.parse(res)!.users as IUser[]);
     });
 
     return (<div className="col">
