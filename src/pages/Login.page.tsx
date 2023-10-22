@@ -19,55 +19,52 @@ export default function LoginScreen() {
         setUsers(JSON.parse(res as unknown as string)!.users as IUser[]);
     });
 
-    const LogUserIn = (credentials: IUser): boolean => {
+    const LogUserIn = (credentials: IUser) => {
         let authenticated: boolean = false;
 
-        for(let i = 0; i < users.length; i++){
-            if(users[i].login == credentials.login)
-                if(users[i].password == credentials.password){
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].login == credentials.login)
+                if (users[i].password == credentials.password) {
                     authenticated = true;
                     break;
                 }
         }
 
-        return authenticated;
+        if (authenticated) {
+            navigate("/files");
+        } else {
+            setError("Login ou senha incorretos. Tente novamente");
+        }
     }
+}
 
-    return (<div className="col">
-        <AppLogo />
-        <div className="row">
-            <form className="col s12">
-                <div className="row">
-                    <div className="input-field col s12">
-                        <input id="email" type="email" className="validate"
-                            value={email}
-                            onChange={(e) => setEmail(e?.target?.value)}
-                        />
-                        <label htmlFor="email">Email</label>
-                    </div>
+return (<div className="col">
+    <AppLogo />
+    <div className="row">
+        <form className="col s12">
+            <div className="row">
+                <div className="input-field col s12">
+                    <input id="email" type="email" className="validate"
+                        value={email}
+                        onChange={(e) => setEmail(e?.target?.value)}
+                    />
+                    <label htmlFor="email">Email</label>
                 </div>
-                <div className="row">
-                    <div className="input-field col s12">
-                        <input id="password" type="password" className="validate" 
-                            value={password}
-                            onChange={(e) => setPassword(e?.target?.value)}
-                        />
-                        <label htmlFor="password">Password</label>
-                    </div>
+            </div>
+            <div className="row">
+                <div className="input-field col s12">
+                    <input id="password" type="password" className="validate"
+                        value={password}
+                        onChange={(e) => setPassword(e?.target?.value)}
+                    />
+                    <label htmlFor="password">Password</label>
                 </div>
-            </form>
-            <span>{error}</span>
-            <a class="waves-effect waves-light btn-large  blue darken-3" onClick={() => {
-                const logged = LogUserIn();
+            </div>
+        </form>
+        <span>{error}</span>
+        <a className="waves-effect waves-light btn-large blue darken-3" onClick={LogUserIn}>Entrar</a>
+        <a className="waves-effect waves-light btn-large blue darken-3">Cadastrar</a>
+    </div>
 
-                if(logged){
-                    navigate("/files");
-                } else {
-                    setError("Login ou senha incorretos. Tente novamente");
-                }
-            }}>Entrar</a>
-            <a class="waves-effect waves-light btn-large  blue darken-3">Cadastrar</a>
-        </div>
-
-    </div>)
+</div>)
 }
