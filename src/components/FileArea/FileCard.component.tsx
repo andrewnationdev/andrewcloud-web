@@ -1,4 +1,6 @@
-export default function FileCardComponent() {
+export default function FileCardComponent(
+    props?:name Ifile;
+) {
     return (
         <div className="row">
             <div className="col">
