@@ -40,7 +40,7 @@ export default function FileUploadComponent() {
                 name: file!.name,
                 blob: blobPart,
                 size: file!.size,
-                lastModifiedDate: file!.lastModifiedDate,
+                lastModifiedDate: file!.lastModified,
                 type: file!.type,
             }];
 
