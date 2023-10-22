@@ -2,15 +2,15 @@
     "users": [
         {
             "login": "ght23@gmail.com",
-            "senha": "12345678"
+            "password": "12345678"
         },
         {
             "login": "zsg4@gmail.com",
-            "senha": "87654321"
+            "password": "87654321"
         },
         {
             "login": "gthor@gmail.com",
-            "senha": "ghtzsg78"
+            "password": "ghtzsg78"
         }
     ]
 }
