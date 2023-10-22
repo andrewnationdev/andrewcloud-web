@@ -23,8 +23,8 @@ export default function LoginScreen() {
         let authenticated: boolean = false;
 
         for(let i = 0; i < users.length; i++){
-            if(user.login == credentials.login)
-                if(user.password == credentials.password){
+            if(users[i].login == credentials.login)
+                if(users[i].password == credentials.password){
                     authenticated = true;
                     break;
                 }
