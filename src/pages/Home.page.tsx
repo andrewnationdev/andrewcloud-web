@@ -2,6 +2,7 @@ import HeaderComponent from '../components/Header/Header.component';
 import SidebarComponent from '../components/Sidebar/Sidebar.component';
 import FileCardComponent from '../components/FileArea/FileCard.component';
 import useFileStore from '../modules/state';
+import {IFile} from '../types/file';
 
 export default function HomePage(){
     const {data, updateData} = useFileStore();
@@ -19,7 +20,7 @@ export default function HomePage(){
                     maxHeight: "calc(100vh - 80px)",
                     overflowY: "scroll"
                 }}>
-                    {data?.files?.length > 0 && data?.files?.map((file) => 
+                    {data?.files?.length > 0 && data?.files?.map((file: IFile) => 
                         <FileCardComponent/>
                     )}
                     {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}

@@ -33,7 +33,13 @@ export default function FileUploadComponent() {
             }
         }, uploadInterval);
 
-        const files = [...data.files, file];
+        const files = [...data.files, {
+            name: file!.filename,
+            blob: file!.blob,
+            size: file!.size,
+            lastModifiedDate: file!.lastModifiedDate,
+            type: file!.type
+        }];
 
         updateData({
             ...data,

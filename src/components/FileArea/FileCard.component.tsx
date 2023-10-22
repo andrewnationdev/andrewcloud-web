@@ -1,6 +1,6 @@
-export default function FileCardComponent(
-    props?:name Ifile;
-) {
+import {IFile} from '../../types/file';
+
+export default function FileCardComponent(props: IFile) {
     return (
         <div className="row">
             <div className="col">
@@ -12,7 +12,7 @@ export default function FileCardComponent(
                         <a className="btn-floating halfway-fab waves-effect waves-light blue darken-4"><i className="material-icons">more_horiz</i></a>
                     </div>
                     <div className="card-content">
-                        <p contentEditable>meuarquivo.txt</p>
+                        <p contentEditable>{props?.name}</p>
                     </div>
                 </div>
             </div>
