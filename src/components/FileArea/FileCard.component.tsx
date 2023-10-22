@@ -14,7 +14,7 @@ export default function FileCardComponent(props: IFile) {
                         <i style={{
                             color: icon?.color,
                             fontSize: '3rem'
-                        }}>{props?.icon}</i>
+                        }}>{icon?.icon}</i>
                         <a className="btn-floating halfway-fab waves-effect waves-light blue darken-4"><i className="material-icons">more_horiz</i></a>
                     </div>
                     <div className="card-content">
