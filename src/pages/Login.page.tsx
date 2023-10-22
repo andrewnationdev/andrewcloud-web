@@ -25,7 +25,7 @@ export default function LoginScreen() {
 
         for (let i = 0; i < users.length; i++) {
             if (users[i].login === credentials.login &&
-                users[i].password === credentials.password) {
+                users[i].senha === credentials.password) {
                     authenticated = true;
                     break;
                 }
