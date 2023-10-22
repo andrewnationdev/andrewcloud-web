@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import AppLogo from '../components/Header/AppLogo.component';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
-import '../main.css';
+import '../styles/main.css';
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
@@ -15,7 +15,7 @@ export default function LoginScreen() {
 
     const { data, isLoading, isError, refetch } = useQuery('login-query', async () => {
         const request = await fetch("/users/users.json");
-        const res = request.text();
+        const res = await request.text();
 
         setUsers(JSON.parse(res as unknown as string)!.users as IUser[]);
     });
