@@ -1,15 +1,10 @@
 import '../../styles/main.css';
+import FileUpload from './FileUpload.component';
 
 export default function SidebarComponent() {
     return (
         <div className="sidebar-container">
-            <a className="waves-effect waves-light btn light-blue accent-3"
-                onClick={() => document.getElementById('avatar')?.click()}
-            >
-                <i className="material-icons left">archive</i>
-                Enviar arquivo
-            </a>
-            <input type="file" id="avatar" hidden name="avatar" accept="image/png, image/jpeg" />
+            <FileUpload/>
             <hr/>
            
             <a className="waves-effect waves-light btn light-blue accent-4">
