@@ -63,7 +63,7 @@ export default function FileUploadComponent() {
     return (
         <>
             <a className="waves-effect waves-light btn light-blue accent-3"
-                onClick={() => document.getElementById('files')?.click()}
+                onClick={() => document.getElementById('file')?.click()}
             >
                 <i className="material-icons left">archive</i>
                 Enviar arquivo
