@@ -21,7 +21,13 @@ export default function HomePage(){
                     overflowY: "scroll"
                 }}>
                     {data?.files?.length > 0 && data?.files?.map((file: IFile) => 
-                        <FileCardComponent/>
+                        <FileCardComponent 
+                            name={file.name}
+                            blob={file.blob}
+                            lastModifiedDate={file.lastModifiedDate}
+                            size={file.size}
+                            type={file.type}
+                        />
                     )}
                     {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}
                 </div>
