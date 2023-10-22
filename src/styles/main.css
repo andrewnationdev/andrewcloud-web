@@ -20,6 +20,9 @@ meter {
 }
 
 .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 15vw;
     position: absolute;
     left: 50%;
