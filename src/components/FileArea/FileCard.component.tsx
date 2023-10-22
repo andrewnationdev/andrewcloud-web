@@ -2,7 +2,7 @@ import {IFile} from '../../types/file';
 import {getFileIcon, TFileIcon} from '../../utils/icons';
 
 export default function FileCardComponent(props: IFile) {
-    const icon: TFileIcon = getFileIcon(prop?.type);
+    const icon: TFileIcon = getFileIcon(propsc?.type);
 
     return (
         <div className="row">
