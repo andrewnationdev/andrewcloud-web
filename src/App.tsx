@@ -6,6 +6,8 @@ import LoginScreen from './pages/Login.page';
 import { useQuery } from 'react-query';
 import Router from 'react-easy-router';
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const { data, isLoading, isError, refetch } = useQuery('global-query', () => { });
@@ -27,7 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter><Router routes={routes} /></BrowserRouter>
+      <BrowserRouter>
+        <ToastContainer>
+          <Router routes={routes} />
+        </ToastContainer>    
+      </BrowserRouter>
     </div>
   );
 }

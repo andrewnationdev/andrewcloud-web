@@ -8,7 +8,7 @@ export default function FileUploadComponent() {
 
     const simulateUpload = () => {
         const totalSteps = 20; 
-        const uploadInterval = 500; 
+        const uploadInterval = 125; 
 
         const fileSize = file!.size!; 
 
@@ -46,7 +46,7 @@ export default function FileUploadComponent() {
                 Enviar arquivo
             </a>
             {file && <span>Enviando {file?.name} - {timeEstimate}</span>}
-            <span>{file?.name} - {uploadProgress}%</span>
+            {file && <progress value={uploadProgress} min={0} max={100} ></progress>}
             <input type="file" onChange={(e) => {
                 const file = e.target.files && e.target.files[0];
 
