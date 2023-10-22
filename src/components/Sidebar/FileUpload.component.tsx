@@ -46,7 +46,7 @@ export default function FileUploadComponent() {
                 Enviar arquivo
             </a>
             {file && <span>Enviando {file?.name} - {timeEstimate}</span>}
-            <span>{file.name} - {uploadProgress}%</span>
+            <span>{file?.name} - {uploadProgress}%</span>
             <input type="file" onChange={(e) => {
                 const file = e?.target?.files[0];
 
