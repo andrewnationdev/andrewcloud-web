@@ -1,6 +1,6 @@
 export interface IFile {
     name: string;
-    blob: Blob;
+    blob: string | ArrayBuffer | null;
     size: number;
     lastModifiedDate: string;
     type: string;
