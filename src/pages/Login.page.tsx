@@ -4,12 +4,13 @@ import AppLogo from '../components/Header/AppLogo.component';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import '../styles/main.css';
+import notify from '../utils/toast';
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const [error, setError] = useState<string>("");
+    //const [error, setError] = useState<string>("");
 
     const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ export default function LoginScreen() {
         if (authenticated) {
             navigate("/files");
         } else {
-            Notify("Login ou senha incorretos. Tente novamente");
+            notify("Login ou senha incorretos. Tente novamente");
         }
     }
 
