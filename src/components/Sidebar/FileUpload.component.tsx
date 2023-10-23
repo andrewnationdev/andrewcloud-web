@@ -81,8 +81,8 @@ export default function FileUploadComponent() {
                 <i className="material-icons left">archive</i>
                 Enviar arquivo
             </a>
-            {file && <span>Enviando {file?.name} - {timeEstimate}</span>}
-            {file && <progress value={uploadProgress} max={100} ></progress>}
+            {file?.name && <span>Enviando {file?.name} - {timeEstimate}</span>}
+            {file?.name && <progress value={uploadProgress} max={100} ></progress>}
             <input type="file" onChange={(e) => {
                 const file = e.target.files && e.target.files[0];
 
