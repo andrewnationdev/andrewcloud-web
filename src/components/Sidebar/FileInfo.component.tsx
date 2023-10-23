@@ -6,7 +6,16 @@ export default function FileInfoComponent(){
         display: "flex",
         flexDirection: "column"
     }}>
-        <div></div>
+        <div> <strong>Informações do arquivo</strong>
+            <span><strong>Nome:</strong> nome.txt</span>
+             <span><strong>Tamanho:</strong>11MB</span>
+             <span><strong>Tipo:</strong> PNG</span>
+             <span><strong>Modificado em:</strong> 25/08/2023 às 19:19</span>
+             <span><strong>Acesso:</strong> Privado</span>
+            
+            
+            <span>98.1 GB de 100 GB usados</span></div>
         <FileActionButtonsComponent/>
     </div>
+
 }
