@@ -6,7 +6,13 @@ export default function FileInfoComponent(){
         display: "flex",
         flexDirection: "column"
     }}>
-        <div> <strong>Informações do arquivo</strong>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: 'flex-start',
+            textAlign: "left"
+        }}>
+            <strong><u>Informações do arquivo:</u></strong>
             <span><strong>Nome:</strong> nome.txt</span>
              <span><strong>Tamanho:</strong>11MB</span>
              <span><strong>Tipo:</strong> PNG</span>
