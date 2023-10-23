@@ -1,5 +1,12 @@
-import useFileStore from ''
+import useFileStore from '../../modules/state';
+import FileActionButtonsComponent from './FileActionButtons.component'
 
 export default function FileInfoComponent(){
-    return <></>
+    return <div style={{
+        display: "flex",
+        flexDirection: "column"
+    }}>
+        <div></div>
+        <FileActionButtonsComponent/>
+    </div>
 }
