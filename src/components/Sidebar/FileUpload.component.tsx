@@ -62,7 +62,7 @@ export default function FileUploadComponent() {
                 simulateUpload();
                 info("Upload realizado com sucesso.");
             } catch(err){
-                notify("Ops, ocorreu um problema: ", err);
+                notify(`Ops, ocorreu um problema: ${err}`);
             }
             setFile(null);
         }
