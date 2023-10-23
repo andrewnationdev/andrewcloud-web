@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useFileStore from '../../modules/state';
+import info from '../../utils/info';
 
 export default function FileUploadComponent() {
     const [file, setFile] = useState<File | null>(null);
