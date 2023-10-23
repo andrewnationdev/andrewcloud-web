@@ -18,7 +18,8 @@ export default function HomePage(){
                     display: "flex",
                     flexWrap: "wrap",
                     maxHeight: "calc(100vh - 80px)",
-                    overflowY: "scroll"
+                    overflowY: "scroll",
+                    width: "80vw"
                 }}>
                     {data?.files?.length > 0 && data?.files?.map((file: IFile) => 
                         <FileCardComponent 
