@@ -1,3 +1,6 @@
 export default function FileActionButtonsComponent(){
-    return <></>
+    return <div>
+
+        
+    </div>
 }
