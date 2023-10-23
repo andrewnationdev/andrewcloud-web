@@ -53,6 +53,8 @@ export default function FileUploadComponent() {
             })
         };
         reader.readAsArrayBuffer(file!);
+        info("Upload realizado com sucesso.");
+        setFile(null);
     }
 
     useEffect(() => {
@@ -60,11 +62,10 @@ export default function FileUploadComponent() {
         if (file) {
             try {
                 simulateUpload();
-                info("Upload realizado com sucesso.");
             } catch(err){
                 notify(`Ops, ocorreu um problema: ${err}`);
+                setFile(null);
             }
-            setFile(null);
         }
     }, [file])
 
