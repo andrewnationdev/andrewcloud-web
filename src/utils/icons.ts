@@ -8,77 +8,77 @@ const icons: TFileIcon[] = [
     {
       icon: "",
       type: "text/plain",
-      color: "",
+      color: "#29b6f6",
     },
     {
       icon: "",
       type: "text/html",
-      color: "",
+      color: "#29b6f6",
     },
     {
       icon: "",
       type: "text/css",
-      color: "",
+      color: "#29b6f6",
     },
     {
       icon: "",
       type: "application/javascript",
-      color: "",
+      color: "#03a9f4",
     },
     {
       icon: "",
       type: "application/json",
-      color: "",
+      color: "#03a9f4",
     },
     {
       icon: "image",
       type: "image/png",
-      color: "",
+      color: "#039be5",
     },
     {
       icon: "image",
       type: "image/jpeg",
-      color: "",
+      color: "#039be5",
     },
     {
       icon: "image",
       type: "image/gif",
-      color: "",
+      color: "#039be5",
     },
     {
       icon: "",
       type: "audio/mpeg",
-      color: "",
+      color: "#0288d1",
     },
     {
       icon: "video_library",
       type: "video/mpeg",
-      color: "",
+      color: "#0277bd",
     },
     {
       icon: "video_library",
       type: "video/mp4",
-      color: "",
+      color: "#0277bd",
     },
     {
       icon: "",
       type: "application/pdf",
-      color: "",
+      color: "#01579b",
     },
     {
       icon: "",
       type: "application/zip",
-      color: "",
+      color: "#01579b",
     },
     {
       icon: "",
       type: "application/x-msdownload",
-      color: "",
+      color: "#01579b",
     },
     {
         icon: "folder",
         type: "folder",
-        color: ""
+        color: "#0d47a1"
     }
   ];
 
