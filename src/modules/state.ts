@@ -7,10 +7,10 @@ interface IStoreActions {
 
 interface IAndrewCloud {
   user: string;
-  avatar?: string;
-  files?: IFile[];
-  storageQuota?: number;
-  selectedFile?: IFile | null; 
+  avatar: string;
+  files: IFile[];
+  storageQuota: number;
+  selectedFile: IFile | null; 
 }
 
 const useFileStore = create<{data: IAndrewCloud } & IStoreActions>((set) => ({
