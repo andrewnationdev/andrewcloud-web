@@ -56,6 +56,11 @@ const icons: TFileIcon[] = [
       color: "",
     },
     {
+      icon: "video_library",
+      type: "video/mp4",
+      color: "",
+    },
+    {
       icon: "",
       type: "application/pdf",
       color: "",

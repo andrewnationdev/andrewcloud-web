@@ -56,12 +56,22 @@ export default function FileUploadComponent() {
     useEffect(() => {
         console.log(file);
         if (file) {
-            simulateUpload();
+            try {
+                simulateUpload();
+                info("Upload realizado com sucesso.");
+            } catch(err){
+                notify("Ops, ocorreu um problema: ", err);
+            }
+            setFile(null);
         }
     }, [file])
 
     return (
-        <>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start"
+        }}>
             <a className="waves-effect waves-light btn light-blue accent-3"
                 onClick={() => document.getElementById('file')?.click()}
             >
@@ -74,8 +84,8 @@ export default function FileUploadComponent() {
                 const file = e.target.files && e.target.files[0];
 
                 if (file) setFile(file)
-                /** adicionar mensagem de erro */
+                else notify("Não foi possível enviar o arquivo. Certifique-se de que ele é válido.")
             }} id="file" hidden name="files" />
-        </>
+        </div>
     )
 }
