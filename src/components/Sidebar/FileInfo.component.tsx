@@ -19,7 +19,7 @@ export default function FileInfoComponent() {
             <span><strong>Nome:</strong>{data?.selectedFile?.name}</span>
             <span><strong>Tamanho:</strong>{bytesToMegabytes(data?.selectedFile?.size)}</span>
             <span><strong>Tipo:</strong>{data?.selectedFile?.type}</span>
-            <span><strong>Modificado em:</strong>{data?.selectedFile?.lastModified}</span>
+            <span><strong>Modificado em:</strong>{data?.selectedFile?.lastModifiedDate}</span>
             <span><strong>Acesso:</strong>privado</span>
             <FileActionButtonsComponent />
         </div>}
