@@ -1,6 +1,6 @@
 import '../../styles/main.css';
 import FileUpload from './FileUpload.component';
-import StorageComponent from './StorageComponent.component';
+import StorageComponent from './Storage.component';
 import FileInfoComponent from './FileInfoComponent.component';
 
 export default function SidebarComponent() {
