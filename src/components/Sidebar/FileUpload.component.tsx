@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useFileStore from '../../modules/state';
 import info from '../../utils/info';
-import notify from '../../utils/notify';
+import notify from '../../utils/toast';
 
 export default function FileUploadComponent() {
     const [file, setFile] = useState<File | null>(null);
