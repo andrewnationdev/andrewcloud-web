@@ -23,6 +23,12 @@ export default function FileActionButtonsComponent(){
         }
     }
 
+    const handlePreviewFile = () => {
+        const url = URL.createObjectURL(data.selectedFile.blob);
+
+        window.open(url);
+    }
+
     return <div style={{
         display: "flex",
         gap: "8px"
@@ -34,7 +40,8 @@ export default function FileActionButtonsComponent(){
             className="btn-floating waves-effect waves-blue darken-1">
             <i className="material-icons">share</i>
         </a>
-        <a 
+        <a
+            onClick={handlePreviewFile}
             className="btn-floating waves-effect waves-blue darken-2">
             <i className="material-icons">remove_red_eye</i>
         </a>
