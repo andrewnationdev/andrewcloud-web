@@ -24,7 +24,11 @@ export default function FileActionButtonsComponent(){
     }
 
     const handlePreviewFile = () => {
-        const url = URL.createObjectURL(data.selectedFile.blob);
+        try {
+            const url = URL.createObjectURL(data.selectedFile.blob);
+        } catch(err) {
+            notify("Não é possível pré-visualizar ou baixar o arquivo.")
+        }
 
         window.open(url);
     }
