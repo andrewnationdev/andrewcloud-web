@@ -13,11 +13,11 @@ export default function LoginScreen() {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
-    const {data, updateData} = useFileStore();
+    const {data: state, updateData} = useFileStore();
 
     const navigate = useNavigate();
 
-    const { result, isLoading, isError, refetch } = useQuery('login-query', async () => {
+    const { data, isLoading, isError, refetch } = useQuery('login-query', async () => {
         const request = await fetch("/users/users.json");
         const res = await request.text();
 
@@ -47,7 +47,7 @@ export default function LoginScreen() {
         if (authenticated) {
             navigate("/files");
             updateData({
-                ...data,
+                ...state,
                 user: currUser.toUpperCase()
             })
         } else {
