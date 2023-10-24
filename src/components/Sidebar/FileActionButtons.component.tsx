@@ -16,6 +16,10 @@ export default function FileActionButtonsComponent(){
                 }
             }
 
+            updateData({
+                ...data,
+                files: filesExceptDeleted
+            })
             info("Arquivo deletado com sucesso!")
 
         } catch(err) {
@@ -25,7 +29,11 @@ export default function FileActionButtonsComponent(){
 
     const handlePreviewFile = () => {
         try {
-            const url = URL.createObjectURL(new Blob([data.selectedFile!.blob!]));
+            const url = URL.createObjectURL(
+                new Blob([data.selectedFile!.blob!], {
+                    type: data.selectedFile!.type
+                })
+            );
             window.open(url);
         } catch(err) {
             notify("Não é possível pré-visualizar ou baixar o arquivo. " + err)
