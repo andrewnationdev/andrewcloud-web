@@ -16,11 +16,11 @@ export default function FileInfoComponent() {
             textAlign: "left"
         }}>
             <strong><u>Informações do arquivo:</u></strong>
-            <span><strong>Nome:</strong>{data?.selectedFile?.name}</span>
-            <span><strong>Tamanho:</strong>{bytesToMegabytes(data?.selectedFile?.size)}</span>
-            <span><strong>Tipo:</strong>{data?.selectedFile?.type}</span>
-            <span><strong>Modificado em:</strong>{data?.selectedFile?.lastModifiedDate}</span>
-            <span><strong>Acesso:</strong>privado</span>
+            <span><strong>Nome: </strong>{data?.selectedFile?.name}</span>
+            <span><strong>Tamanho: </strong>{bytesToMegabytes(data?.selectedFile?.size).toFixed(2)} MB</span>
+            <span><strong>Tipo: </strong>{data?.selectedFile?.type}</span>
+            <span><strong>Modificado em: </strong>{data?.selectedFile?.lastModifiedDate}</span>
+            <span><strong>Acesso: </strong>privado</span>
             <FileActionButtonsComponent />
         </div>}
     </div>

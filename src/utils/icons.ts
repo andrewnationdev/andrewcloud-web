@@ -79,7 +79,7 @@ const icons: TFileIcon[] = [
         icon: "folder",
         type: "folder",
         color: "#0d47a1"
-    }
+    },
   ];
 
 export function getFileIcon(type: string): TFileIcon {
@@ -90,8 +90,8 @@ export function getFileIcon(type: string): TFileIcon {
     }
 
     return {
-        icon: "",
+        icon: "insert_drive_file",
         type: "",
-        color: ""
+        color: "#f9f9f9"
     }
 }
