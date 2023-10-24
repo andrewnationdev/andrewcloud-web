@@ -5,12 +5,15 @@ import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import '../styles/main.css';
 import notify from '../utils/toast';
-import generateUUID from '../utils/uuid'
+import generateUUID from '../utils/uuid';
+import useFileStore from '../modules/state'
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+
+    const {data, updateData} = useFileStore();
 
     const navigate = useNavigate();
 
