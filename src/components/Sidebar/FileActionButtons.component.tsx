@@ -11,7 +11,7 @@ export default function FileActionButtonsComponent(){
             const currentFile = data.selectedFile;
 
             for(let file = 0; file < data.files.length; file++){
-                if(data.files[file].name != currentFile.name){
+                if(data.files[file].name != currentFile!.name){
                     filesExceptDeleted.push(data.files[file]);
                 }
             }
