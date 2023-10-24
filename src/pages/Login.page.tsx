@@ -1,16 +1,16 @@
 import { IUser } from '../types/user';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppLogo from '../components/Header/AppLogo.component';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import '../styles/main.css';
 import notify from '../utils/toast';
+import generateUUID from '../utils/uuid'
 
 export default function LoginScreen() {
     const [users, setUsers] = useState<IUser[]>([]);
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    //const [error, setError] = useState<string>("");
 
     const navigate = useNavigate();
 
@@ -21,19 +21,32 @@ export default function LoginScreen() {
         setUsers(JSON.parse(res as unknown as string)!.users as IUser[]);
     });
 
+    useEffect(()=> {
+        if(localStorage.getItem("token")){
+            navigate("/files");
+        }
+    }, [])
+
     const LogUserIn = (credentials: IUser) => {
         let authenticated: boolean = false;
+        let currUser: string = '';
 
         for (let i = 0; i < users.length; i++) {
             if (users[i].login === credentials.login &&
                 users[i].password === credentials.password) {
                 authenticated = true;
+                currUser = users[i].login;
+                localStorage.setItem("token", generateUUID());
                 break;
             }
         }
 
         if (authenticated) {
             navigate("/files");
+            updateData({
+                ...data,
+                user: currUser.toUpperCase()
+            })
         } else {
             notify("Login ou senha incorretos. Tente novamente");
         }

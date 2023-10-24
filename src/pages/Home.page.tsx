@@ -3,9 +3,19 @@ import SidebarComponent from '../components/Sidebar/Sidebar.component';
 import FileCardComponent from '../components/FileArea/FileCard.component';
 import useFileStore from '../modules/state';
 import {IFile} from '../types/file';
+import React, {useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage(){
     const {data, updateData} = useFileStore();
+
+    const navigate = useNavigate();
+
+    useEffect(()=> {
+        if(!localStorage.getItem("token")){
+            navigate("/");
+        }
+    }, [])
 
     return(
         <>

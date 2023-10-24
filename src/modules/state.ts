@@ -16,7 +16,7 @@ interface IAndrewCloud {
 const useFileStore = create<{data: IAndrewCloud } & IStoreActions>((set) => ({
     data: {
         user: '',
-        avatar: '',
+        avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
         files: [],
         storageQuota: 0,
         selectedFile: null
