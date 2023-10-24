@@ -48,7 +48,7 @@ export default function LoginScreen() {
             navigate("/files");
             updateData({
                 ...state,
-                user: currUser.toUpperCase()
+                user: currUser.toUpperCase().split('@')[0]
             })
         } else {
             notify("Login ou senha incorretos. Tente novamente");
