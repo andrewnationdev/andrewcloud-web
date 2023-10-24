@@ -17,7 +17,7 @@ export default function LoginScreen() {
 
     const navigate = useNavigate();
 
-    const { data, isLoading, isError, refetch } = useQuery('login-query', async () => {
+    const { result, isLoading, isError, refetch } = useQuery('login-query', async () => {
         const request = await fetch("/users/users.json");
         const res = await request.text();
 
@@ -85,7 +85,9 @@ export default function LoginScreen() {
                         <a className="waves-effect waves-light btn blue darken-3"
                             onClick={() => LogUserIn({ login: email, password })}
                         >Entrar</a>
-                        <a className="waves-effect waves-light btn blue darken-3">
+                        <a 
+                            onClick={() => notify("Não é possível criar novas contas a partir de seu IP")} 
+                            className="waves-effect waves-light btn blue darken-3">
                             Cadastrar
                         </a>
                     </div>
