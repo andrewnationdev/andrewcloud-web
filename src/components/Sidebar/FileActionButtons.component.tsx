@@ -1,5 +1,5 @@
-import {notify} from '../../utils/toast'
-import {info} from '../../utils/info'
+import notify from '../../utils/toast'
+import info from '../../utils/info'
 import useFileStore from '../../modules/state'
 
 export default function FileActionButtonsComponent(){
