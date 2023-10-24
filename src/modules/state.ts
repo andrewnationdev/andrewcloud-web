@@ -13,7 +13,7 @@ interface IAndrewCloud {
   selectedFile: IFile | null; 
 }
 
-const useFileStore = create<{data: IAndrewCloud } & IStoreActions>((set) => ({
+const useFileStore = create<{data: IAndrewCloud } & IStoreActions>(persist((set) => ({
     data: {
         user: '',
         avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
@@ -24,6 +24,8 @@ const useFileStore = create<{data: IAndrewCloud } & IStoreActions>((set) => ({
     updateData: (newData) => {
         set((s) => ({ data: { ...s.data, ...newData } }));
       },      
-}));
+})), {
+  name: "andrew-cloud-local"
+});
 
 export default useFileStore;
