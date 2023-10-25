@@ -78,7 +78,7 @@ const icons: TFileIcon[] = [
     {
         icon: "folder",
         type: "folder",
-        color: "#0d47a1"
+        color: "#fff5a1"
     },
   ];
 
