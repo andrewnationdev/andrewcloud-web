@@ -7,9 +7,7 @@ export default function SidebarComponent() {
     return (
         <div className="sidebar-container">
             <FileUpload/>
-            <hr/>
             <FileInfoComponent/>
-            <hr/>
             <StorageComponent/>
             <a className="waves-effect waves-light btn light-blue accent-4">
                 <i className="material-icons left">add_shopping_cart</i>

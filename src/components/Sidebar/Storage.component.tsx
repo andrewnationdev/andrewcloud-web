@@ -6,7 +6,8 @@ export default function StorageComponent() {
 
     return <div style={{
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        margin: "0.95rem"
     }}>
         <meter 
             min="0" 

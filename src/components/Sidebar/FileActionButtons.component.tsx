@@ -19,7 +19,7 @@ export default function FileActionButtonsComponent(){
             updateData({
                 ...data,
                 files: filesExceptDeleted,
-                selectedFile: [],
+                selectedFile: null,
                 storageQuota: data.storageQuota - currentFile.size
             })
 
