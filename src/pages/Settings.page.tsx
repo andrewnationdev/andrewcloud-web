@@ -99,7 +99,10 @@ export default function SettingsPage() {
                         <div className="input-field col s12">
                             <input id="password" type="password" className="validate"
                                 value={settings.password}
-                                onChange={(e) => setPassword(e?.target?.value)}
+                                onChange={(e) => setSettings((s) => ({
+                                    ...s,
+                                    password: e?.target?.value
+                                }))}
                             />
                             <label htmlFor="password">Password</label>
                         </div>
