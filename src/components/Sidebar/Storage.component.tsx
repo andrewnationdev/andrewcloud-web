@@ -1,5 +1,6 @@
 import useFileStore from '../../modules/state'
 import { bytesToGigabytes } from '../../utils/convert';
+import React, {useEffect} from 'react'
 
 export default function StorageComponent() {
     const { data, updateData } = useFileStore();
