@@ -8,7 +8,7 @@ export default function HeaderComponent() {
     const {data, updateData} = useFileStore();
 
     const handleNewFolder = () => {
-      let folderName: string = prompt("insira o nome da pasta");
+      let folderName: string = prompt("insira o nome da pasta")!;
 
       if (folderName != "") {
         const folder = {
