@@ -48,21 +48,21 @@ export default function FileActionButtonsComponent(){
             onClick={()=>{
                 notify("Não é possível compartilhar publicamente o arquivo. Assine o plano PRO.")
             }}
-            className="btn-floating waves-effect waves-blue darken-1">
+            className="btn-floating btn-small waves-effect waves-blue darken-1">
             <i className="material-icons">share</i>
         </a>
         <a
             onClick={handlePreviewFile}
-            className="btn-floating waves-effect waves-blue darken-2">
+            className="btn-floating btn-small waves-effect waves-blue darken-2">
             <i className="material-icons">remove_red_eye</i>
         </a>
         <a 
-            className="btn-floating waves-effect waves-blue darken-3">
+            className="btn-floating btn-small waves-effect waves-blue darken-3">
             <i className="material-icons">file_download</i>
         </a>
         <a
             onClick={handleRemoveFile}
-            className="btn-floating waves-effect red accent-4">
+            className="btn-floating btn-small waves-effect red accent-4">
             <i className="material-icons">remove</i>
         </a>
     </div>
