@@ -16,7 +16,7 @@ export default function HeaderComponent() {
             blob: null,
             type: "folder",
             size: 0,
-            lastModifiedData: new Date().getTime(),
+            lastModifiedDate: new Date().getTime(),
             isFolder: true,
         }
 
