@@ -1,5 +1,4 @@
 .sidebar-container {
-    border-right: 2px solid #add8e6;
     height: calc(100vh - 80px);
     display: flex;
     padding: 1.5rem;
@@ -8,6 +7,7 @@
     max-height: calc(100vh - 80px);
     gap: 0.5rem;
     max-width: 25vw;
+    background-color: #f7f9fc;
 }
 
 meter {
