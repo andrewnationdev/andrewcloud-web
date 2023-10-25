@@ -1,7 +1,7 @@
 import AvatarComponent from './Avatar.component';
 import AppLogoComponent from './AppLogo.component';
 import SearchComponent from './Search.component';
-import notify from '../../utils/notify';
+import notify from '../../utils/toast';
 import useFileStore from '../../modules/state';
 
 export default function HeaderComponent() {
