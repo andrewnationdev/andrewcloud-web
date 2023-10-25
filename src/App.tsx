@@ -8,6 +8,7 @@ import Router from 'react-easy-router';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SettingsPage from './pages/Settings.page';
 
 function App() {
   const { data, isLoading, isError, refetch } = useQuery('global-query', () => { });
@@ -24,6 +25,10 @@ function App() {
     {
       path: "/files",
       element: <HomePage/>
+    },
+    {
+      path: "/settings",
+      element: <SettingsPage/>
     }
   ]
 
