@@ -14,21 +14,26 @@ interface IAndrewCloud {
   selectedFile: IFile | null;
 }
 
-const useFileStore = create<IAndrewCloud & IStoreActions>(
+const useFileStore = create<{ data: IAndrewCloud } & IStoreActions>(
   persist(
     (set) => ({
-      user: '',
-      avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
-      files: [],
-      storageQuota: 0,
-      selectedFile: null,
+      data: {
+        user: '',
+        avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
+        files: [],
+        storageQuota: 0,
+        selectedFile: null,
+      },
+      updateData: (newData) => {
+        set((s) => ({ data: { ...s.data, ...newData } }));
+      },
     }),
     {
       name: 'andrew-cloud-local',
       getStorage: () => localStorage.getItem('yourLocalStorageKey'),
       onRehydrateStorage: (value) => {
         if (value) {
-          set(value); // Update the entire state with the retrieved value
+          set((s) => ({ data: { ...s.data, ...value.data } }));
         }
       },
     }
