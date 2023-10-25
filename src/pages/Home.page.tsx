@@ -2,29 +2,29 @@ import HeaderComponent from '../components/Header/Header.component';
 import SidebarComponent from '../components/Sidebar/Sidebar.component';
 import FileCardComponent from '../components/FileArea/FileCard.component';
 import useFileStore from '../modules/state';
-import {IFile} from '../types/file';
-import React, {useEffect} from 'react';
+import { IFile } from '../types/file';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import NoFilesComponent from '../components/FileArea/NoFiles.component';
 
-
-export default function HomePage(){
-    const {data, updateData} = useFileStore();
+export default function HomePage() {
+    const { data, updateData } = useFileStore();
 
     const navigate = useNavigate();
 
-    useEffect(()=> {
-        if(!localStorage.getItem("token")){
+    useEffect(() => {
+        if (!localStorage.getItem("token")) {
             navigate("/");
         }
     }, [])
 
-    return(
+    return (
         <>
-            <HeaderComponent/>
+            <HeaderComponent />
             <div style={{
                 display: "flex",
             }}>
-                <SidebarComponent/>
+                <SidebarComponent />
                 <div style={{
                     display: "flex",
                     maxHeight: "calc(100vh - 80px)",
@@ -40,8 +40,8 @@ export default function HomePage(){
                         width: "auto",
                         flexWrap: "wrap",
                         justifyContent: "space-between"
-                    }}>{data?.files?.length > 0 && data?.files?.map((file: IFile) => 
-                        <FileCardComponent 
+                    }}>{data?.files?.length > 0 && data?.files?.map((file: IFile) =>
+                        <FileCardComponent
                             name={file.name}
                             blob={file.blob}
                             lastModifiedDate={file.lastModifiedDate}
@@ -49,7 +49,7 @@ export default function HomePage(){
                             type={file.type}
                         />
                     )}</div>
-                    {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}
+                    {data?.files?.length == 0 && <NoFilesComponent/>}
                 </div>
             </div>
         </>
