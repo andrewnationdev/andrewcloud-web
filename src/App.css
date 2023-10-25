@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f7f9fc;
 }
 
 .App-logo {
@@ -44,5 +45,5 @@ header {
   align-items: center;
   padding: 1rem;
   height: 80px;
-  border-bottom: 3px solid #1565c00a;
+  background-color: #f7f9fc;
 }
