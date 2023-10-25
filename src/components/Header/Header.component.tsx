@@ -4,7 +4,13 @@ import SearchComponent from './Search.component';
 
 export default function HeaderComponent() {
     const handleNewFolder = () => {
-        //lógica de criar pasta
+      let folderName: string = prompt ("insira o nome da pasta");
+
+      if (folderName != "") {
+        
+      } else {
+notify("O nome da pasta informada está vazio")
+      }
         
     }
 
