@@ -5,6 +5,7 @@ import SearchComponent from './Search.component';
 export default function HeaderComponent() {
     const handleNewFolder = () => {
         //lógica de criar pasta
+        
     }
 
     return (
