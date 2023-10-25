@@ -13,7 +13,7 @@ interface IAndrewCloud {
   selectedFile: IFile | null;
 }
 
-const useFileStore = create<{ data: IAndrewCloud } & IStoreActions>(persist((set) => ({
+const useFileStore = create<{ data: IAndrewCloud } & IStoreActions>()(persist((set) => ({
   data: {
     user: '',
     avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
