@@ -26,6 +26,7 @@ export default function HomePage(){
             }}>
                 <SidebarComponent/>
                 <div style={{
+                    display: "flex",
                     maxHeight: "calc(100vh - 80px)",
                     overflowY: "scroll",
                     width: "80vw",
@@ -36,7 +37,9 @@ export default function HomePage(){
                 }}>
                     <div style={{
                         display: "flex",
-                        width: "auto"
+                        width: "auto",
+                        flexWrap: "wrap",
+                        justifyContent: "space-between"
                     }}>{data?.files?.length > 0 && data?.files?.map((file: IFile) => 
                         <FileCardComponent 
                             name={file.name}
