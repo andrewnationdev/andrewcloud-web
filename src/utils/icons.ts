@@ -92,6 +92,6 @@ export function getFileIcon(type: string): TFileIcon {
     return {
         icon: "insert_drive_file",
         type: "",
-        color: "#f0f1a2"
+        color: "#d5d5c9"
     }
 }
