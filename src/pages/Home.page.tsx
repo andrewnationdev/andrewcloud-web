@@ -26,8 +26,6 @@ export default function HomePage(){
             }}>
                 <SidebarComponent/>
                 <div style={{
-                    display: "flex",
-                    flexWrap: "wrap",
                     maxHeight: "calc(100vh - 80px)",
                     overflowY: "scroll",
                     width: "80vw",
@@ -36,7 +34,10 @@ export default function HomePage(){
                     backgroundColor: 'white',
                     padding: '2rem'
                 }}>
-                    {data?.files?.length > 0 && data?.files?.map((file: IFile) => 
+                    <div style={{
+                        display: "flex",
+                        width: "auto"
+                    }}>{data?.files?.length > 0 && data?.files?.map((file: IFile) => 
                         <FileCardComponent 
                             name={file.name}
                             blob={file.blob}
@@ -44,7 +45,7 @@ export default function HomePage(){
                             size={file.size}
                             type={file.type}
                         />
-                    )}
+                    )}</>
                     {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}
                 </div>
             </div>
