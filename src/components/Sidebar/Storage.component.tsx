@@ -2,7 +2,15 @@ import useFileStore from '../../modules/state'
 import { bytesToGigabytes } from '../../utils/convert';
 
 export default function StorageComponent() {
-    const { data } = useFileStore();
+    const { data, updateData } = useFileStore();
+
+    useEffect(()=>{
+        if(data.storageQuota < 0)
+            updateData({
+                ...data,
+                storageQuota: 0
+            })
+    }, [data.storageQuota])
 
     return <div style={{
         display: "flex",

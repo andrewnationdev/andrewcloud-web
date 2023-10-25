@@ -48,7 +48,7 @@ export default function SettingsPage() {
             avatar: 'https://th.bing.com/th/id/OIP._Ub60e6muH_f6fAyfyZW8AHaEK?pid=ImgDet&rs=1',
             files: [],
             selectedFile: null,
-            storageQuote: 0
+            storageQuota: 0
         })
 
         localStorage.removeItem("token");
