@@ -110,10 +110,10 @@ export default function SettingsPage() {
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="avatar" type="text" className="validate"
-                                value={settings.avatar}
+                                value={settings.avatarURL}
                                 onChange={(e) => setSettings((s) => ({
                                     ...s,
-                                    avatar: e?.target?.value
+                                    avatarURL: e?.target?.value
                                 }))}
                             />
                             <label htmlFor="avatar">URL do Avatar</label>
