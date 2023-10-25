@@ -45,7 +45,8 @@ export default function FileActionButtonsComponent(){
 
     return <div style={{
         display: "flex",
-        gap: "8px"
+        gap: "8px",
+        marginTop: "0.75rem"
     }}>
         <a
             onClick={()=>{
