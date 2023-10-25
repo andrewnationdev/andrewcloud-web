@@ -23,10 +23,11 @@ const useFileStore = create<{ data: IAndrewCloud } & IStoreActions>(
       storageQuota: 0,
       selectedFile: null,
     },
-  })),
+  }),
   {
     name: "andrew-cloud-local",
   }
+  )
 );
 
 export default useFileStore;
