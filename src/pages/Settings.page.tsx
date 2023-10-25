@@ -74,7 +74,7 @@ export default function SettingsPage() {
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" type="email" className="validate"
-                                value={email}
+                                value={settings.email}
                                 onChange={(e) => setSettings((s) => ({
                                     ...s,
                                     email: e?.target?.value
@@ -86,7 +86,7 @@ export default function SettingsPage() {
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="user" type="text" className="validate"
-                                value={user}
+                                value={settings.user}
                                 onChange={(e) => setSettings((s) => ({
                                     ...s,
                                     user: e?.target?.value
@@ -98,7 +98,7 @@ export default function SettingsPage() {
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="password" type="password" className="validate"
-                                value={password}
+                                value={settings.password}
                                 onChange={(e) => setPassword(e?.target?.value)}
                             />
                             <label htmlFor="password">Password</label>
@@ -107,7 +107,7 @@ export default function SettingsPage() {
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="avatar" type="text" className="validate"
-                                value={avatar}
+                                value={settings.avatar}
                                 onChange={(e) => setSettings((s) => ({
                                     ...s,
                                     avatar: e?.target?.value
