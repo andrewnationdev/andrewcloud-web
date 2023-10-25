@@ -20,7 +20,7 @@ export default function FileActionButtonsComponent(){
                 ...data,
                 files: filesExceptDeleted,
                 selectedFile: null,
-                storageQuota: data.storageQuota - currentFile.size
+                storageQuota: data.storageQuota - currentFile!.size
             })
 
             info("Arquivo deletado com sucesso!");
