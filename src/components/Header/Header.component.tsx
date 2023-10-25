@@ -3,6 +3,10 @@ import AppLogoComponent from './AppLogo.component';
 import SearchComponent from './Search.component';
 
 export default function HeaderComponent() {
+    const handleNewFolder = () => {
+        //lógica de criar pasta
+    }
+
     return (
         <header>
             <div style={{
@@ -23,7 +27,10 @@ export default function HeaderComponent() {
                     gap: "1rem",
                     alignItems: "center"
                 }}>
-                    <a className="btn-floating btn-small waves-effect waves-light blue darken-2">
+                    <a
+                        onClick={handleNewFolder}
+                        title="Criar nova pasta"
+                        className="btn-floating btn-small waves-effect waves-light blue darken-2">
                         <i className="material-icons">add</i>
                     </a>
                     <a className="btn-floating btn-small waves-effect waves-light light-blue darken-1">

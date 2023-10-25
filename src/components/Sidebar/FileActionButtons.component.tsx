@@ -56,7 +56,8 @@ export default function FileActionButtonsComponent(){
             className="btn-floating btn-small waves-effect waves-blue darken-2">
             <i className="material-icons">remove_red_eye</i>
         </a>
-        <a 
+        <a
+            onClick={handlePreviewFile}
             className="btn-floating btn-small waves-effect waves-blue darken-3">
             <i className="material-icons">file_download</i>
         </a>
