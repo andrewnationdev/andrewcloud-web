@@ -5,7 +5,7 @@ import useFileStore from '../modules/state';
 import {IFile} from '../types/file';
 import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import {persist} from 'zustand/middleware'
+
 
 export default function HomePage(){
     const {data, updateData} = useFileStore();

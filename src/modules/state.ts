@@ -1,5 +1,6 @@
 import create from 'zustand';
 import {IFile} from '../types/file';
+import {persist} from 'zustand/middleware'
 
 interface IStoreActions {
   updateData: (newData: IAndrewCloud) => void;
