@@ -45,7 +45,7 @@ export default function HomePage(){
                             size={file.size}
                             type={file.type}
                         />
-                    )}</>
+                    )}</div>
                     {data?.files?.length == 0 && <>Nenhum arquivo enviado. Envie alguns.</>}
                 </div>
             </div>

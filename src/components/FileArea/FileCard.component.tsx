@@ -18,7 +18,7 @@ export default function FileCardComponent(props: IFile) {
             <div className="col">
                 <div className="card" style={{
                     width: "200px",
-                    with: "250px"
+                    height: "250px"
                 }}>
                     <div className="card-image">
                         <i 
