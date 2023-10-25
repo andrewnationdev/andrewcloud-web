@@ -123,13 +123,13 @@ export default function SettingsPage() {
 
                 <a
                     onClick={handleSaveData}
-                    className="waves-effect waves-light btn">Salvar</a>
+                    className="waves-effect waves-light btn blue accent-3">Salvar</a>
                 <a
                     onClick={handleDeleteAccount}
-                    className="waves-effect waves-light btn">Excluir conta</a>
+                    className="waves-effect waves-light btn red accent-4">Excluir conta</a>
                 <a
                     onClick={handleLogOut}
-                    className="waves-effect waves-light btn">Deslogar</a>
+                    className="waves-effect waves-light btn deep-purple darken-2">Deslogar</a>
             </div>
         </div>
     )
