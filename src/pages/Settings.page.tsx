@@ -26,7 +26,7 @@ export default function SettingsPage() {
     useEffect(() => {
         setSettings({
             user: data.user,
-            email: data.email,
+            email: data.user,
             password: '12345678',
             avatarURL: data.avatar
         })
