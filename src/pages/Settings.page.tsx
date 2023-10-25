@@ -3,6 +3,7 @@ import '../styles/settings.css';
 import useFileStore from '../modules/state';
 import info from '../utils/info';
 import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 
 interface ISettings {
     user: string;
