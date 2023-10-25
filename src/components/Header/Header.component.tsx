@@ -1,15 +1,31 @@
 import AvatarComponent from './Avatar.component';
 import AppLogoComponent from './AppLogo.component';
 import SearchComponent from './Search.component';
+import notify from '../../utils/notify';
+import useFileStore from '../../modules/state';
 
 export default function HeaderComponent() {
+    const {data, updateData} = useFileStore();
+
     const handleNewFolder = () => {
-      let folderName: string = prompt ("insira o nome da pasta");
+      let folderName: string = prompt("insira o nome da pasta");
 
       if (folderName != "") {
-        
+        const folder = {
+            name: folderName,
+            blob: null,
+            type: "folder",
+            size: 0,
+            lastModifiedData: new Date().getTime(),
+            isFolder: true,
+        }
+
+        updateData({
+            ...data,
+            files: [...data.files, folder]
+        })
       } else {
-notify("O nome da pasta informada está vazio")
+        notify("O nome da pasta informada está vazio")
       }
         
     }

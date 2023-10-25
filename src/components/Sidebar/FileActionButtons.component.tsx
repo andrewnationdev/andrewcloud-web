@@ -18,9 +18,12 @@ export default function FileActionButtonsComponent(){
 
             updateData({
                 ...data,
-                files: filesExceptDeleted
+                files: filesExceptDeleted,
+                selectedFile: [],
+                storageQuota: data.storageQuota - currentFile.size
             })
-            info("Arquivo deletado com sucesso!")
+
+            info("Arquivo deletado com sucesso!");
 
         } catch(err) {
             notify(`Não foi possível deletar o arquivo. ERRO: ${err}`)

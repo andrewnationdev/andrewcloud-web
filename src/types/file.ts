@@ -4,4 +4,8 @@ export interface IFile {
     size: number;
     lastModifiedDate: string | number;
     type: string;
+    isFolder?: boolean;
+    folderFiles?: IFolder[];
 }
+
+type IFolder = IFile;
