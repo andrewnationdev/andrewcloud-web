@@ -3,9 +3,12 @@ import AppLogoComponent from './AppLogo.component';
 import SearchComponent from './Search.component';
 import notify from '../../utils/toast';
 import useFileStore from '../../modules/state';
+import { useNavigate } from 'react-router-dom';
 
 export default function HeaderComponent() {
     const {data, updateData} = useFileStore();
+
+    const navigate = useNavigate();
 
     const handleNewFolder = () => {
       let folderName: string = prompt("insira o nome da pasta")!;
@@ -56,7 +59,11 @@ export default function HeaderComponent() {
                         className="btn-floating btn-small waves-effect waves-light blue darken-2">
                         <i className="material-icons">add</i>
                     </a>
-                    <a className="btn-floating btn-small waves-effect waves-light light-blue darken-1">
+                    <a 
+                        title="Configurações do Usuário"
+                        onClick={() => navigate("/settings")}
+                        className="btn-floating btn-small waves-effect waves-light light-blue darken-1"
+                    >
                         <i className="material-icons">settings</i>
                     </a>
                 </div>
