@@ -31,8 +31,10 @@ export default function HomePage(){
                     maxHeight: "calc(100vh - 80px)",
                     overflowY: "scroll",
                     width: "80vw",
-                    borderTopLeftRadius: '15px',
-                    borderTopRightRadius: '15px'
+                    borderTopLeftRadius: '25px',
+                    borderTopRightRadius: '25px',
+                    backgroundColor: 'white',
+                    padding: '2rem'
                 }}>
                     {data?.files?.length > 0 && data?.files?.map((file: IFile) => 
                         <FileCardComponent 
