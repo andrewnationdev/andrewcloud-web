@@ -14,7 +14,7 @@ export default function NoFilesComponent() {
                 src={imgsrc}
                 alt="Not found error" />
             <span style={{
-                
+                fontSize: "1.5rem"
             }}>Nenhum arquivo enviado. Clique em <u>ENVIAR.</u></span>
         </div>
     )
