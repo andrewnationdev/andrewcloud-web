@@ -49,7 +49,7 @@ export default function FileUploadComponent() {
             updateData({
                 ...data,
                 files: files,
-                storageQuota: data.storageQuota + uploadSize
+                storageQuota: data.storageQuota + file!.size
             })
         };
         reader.readAsArrayBuffer(file!);
