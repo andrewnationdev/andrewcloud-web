@@ -4,7 +4,9 @@ import StorageComponent from './Storage.component';
 import FileInfoComponent from './FileInfo.component';
 
 export default function SidebarComponent() {
-    const isElectron = window && window.process && window.process?.type === 'renderer';
+    const isElectron = (window && window.process && (window.process as { 
+        type?: string 
+    }).type === 'renderer') || false;
 
     return (
         <div className="sidebar-container">
