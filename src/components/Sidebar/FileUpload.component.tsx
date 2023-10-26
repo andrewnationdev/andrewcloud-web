@@ -77,12 +77,7 @@ export default function FileUploadComponent() {
     }, [file])
 
     return (
-        <div style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            width: '100%'
-        }}>
+        <div>
             <a className="waves-effect waves-light btn blue accent-3"
                 onClick={() => document.getElementById('file')?.click()}
             >
@@ -100,7 +95,14 @@ export default function FileUploadComponent() {
 }
 
 /**
- *             {file?.name && <span>Enviando {file?.name} - {timeEstimate}</span>}
-            {file?.name && <progress value={uploadProgress} max={100} ></progress>}
+{file?.name && <span>Enviando {file?.name} - {timeEstimate}</span>}
+{file?.name && <progress value={uploadProgress} max={100} ></progress>}
+
+style={{
+display: "flex",
+flexDirection: "column",
+alignItems: "flex-start",
+width: '100%'
+}}
  * 
  */
