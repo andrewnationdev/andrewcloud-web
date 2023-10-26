@@ -67,10 +67,14 @@ export default function SettingsPage() {
             <HeaderComponent />
             <div style={{
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
+                marginLeft: "auto",
+                marginRight: "auto",
+                width: "50vw",
+                alignItems: "center"
             }}>
-                <h2>Configurações</h2>
-                <form className="col s12">
+                <h2 className="page-title">Configurações</h2>
+                <form className="col s12 settings form">
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" type="email" className="validate"
@@ -121,6 +125,7 @@ export default function SettingsPage() {
                     </div>
                 </form>
 
+            <div className="buttons-area">
                 <a
                     onClick={handleSaveData}
                     className="waves-effect waves-light btn blue accent-3">Salvar</a>
@@ -130,6 +135,7 @@ export default function SettingsPage() {
                 <a
                     onClick={handleLogOut}
                     className="waves-effect waves-light btn deep-purple darken-2">Deslogar</a>
+            </div>
             </div>
         </div>
     )

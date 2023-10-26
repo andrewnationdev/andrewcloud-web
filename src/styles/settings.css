@@ -2,6 +2,10 @@
     height: 100vh;
 }
 
-.settings-page > h2 {
+.page-title {
     font-size: 1.25rem;
+}
+
+.form {
+    width: 300px;
 }
