@@ -13,6 +13,12 @@ export default function SidebarComponent() {
                 <i className="material-icons left">add_shopping_cart</i>
                 Comprar mais
             </a>
+            <a className="waves-effect waves-light btn blue darken-2"
+                href="https://github.com/andrewnationdev/andrewcloud-electron/releases"
+            >
+                <i className="material-icons left">desktop_windows</i>
+                App Desktop
+            </a>
         </div>
     );
 }

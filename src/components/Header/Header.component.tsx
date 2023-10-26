@@ -11,7 +11,7 @@ export default function HeaderComponent() {
     const navigate = useNavigate();
 
     const handleNewFolder = () => {
-      let folderName: string = (): string => {
+        const getFolderName = (): string => {
         const isElectron = window && window.process && window.process.type === 'renderer';
 
         if (isElectron)
@@ -22,7 +22,7 @@ export default function HeaderComponent() {
 
       if (folderName != "") {
         const folder = {
-            name: folderName,
+            name: getFolderName(),
             blob: null,
             type: "folder",
             size: 0,
