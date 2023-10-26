@@ -73,9 +73,10 @@ export default function FileUploadComponent() {
         <div style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start"
+            alignItems: "flex-start",
+            width: '100%'
         }}>
-            <a className="waves-effect waves-light btn light-blue accent-3"
+            <a className="waves-effect waves-light btn blue accent-3"
                 onClick={() => document.getElementById('file')?.click()}
             >
                 <i className="material-icons left">archive</i>
