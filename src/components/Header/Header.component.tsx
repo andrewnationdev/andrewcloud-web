@@ -22,7 +22,7 @@ export default function HeaderComponent() {
         return prompt("insira o nome da pasta")!;
       }
 
-      if (folderName != "") {
+      if (getFolderName() != "") {
         const folder = {
             name: getFolderName(),
             blob: null,
