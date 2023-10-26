@@ -128,13 +128,22 @@ export default function SettingsPage() {
             <div className="buttons-area">
                 <a
                     onClick={handleSaveData}
-                    className="waves-effect waves-light btn blue accent-3">Salvar</a>
+                    className="waves-effect waves-light btn blue accent-3">
+                    <i className="material-icons left">save</i>
+                    Salvar
+                </a>
                 <a
                     onClick={handleDeleteAccount}
-                    className="waves-effect waves-light btn red accent-4">Excluir conta</a>
+                    className="waves-effect waves-light btn red accent-4">
+                    <i className="material-icons left">delete</i>        
+                    Excluir conta
+                </a>
                 <a
                     onClick={handleLogOut}
-                    className="waves-effect waves-light btn deep-purple darken-2">Deslogar</a>
+                    className="waves-effect waves-light btn deep-purple darken-2">
+                    <i className="material-icons left">exit_to_app</i>
+                    Deslogar
+                </a>
             </div>
             </div>
         </div>

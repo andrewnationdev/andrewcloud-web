@@ -68,7 +68,7 @@ export default function FileActionButtonsComponent(){
         <a
             onClick={handleRemoveFile}
             className="btn-floating btn-small waves-effect red accent-4">
-            <i className="material-icons">remove</i>
+            <i className="material-icons">delete</i>
         </a>
     </div>
 }

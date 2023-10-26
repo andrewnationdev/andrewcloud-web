@@ -11,7 +11,7 @@ export default function HeaderComponent() {
     const navigate = useNavigate();
 
     const handleNewFolder = () => {
-      let folderName: string = () => {
+      let folderName: string = (): string => {
         const isElectron = window && window.process && window.process.type === 'renderer';
 
         if (isElectron)
