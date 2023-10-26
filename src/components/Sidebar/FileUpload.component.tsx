@@ -58,7 +58,7 @@ export default function FileUploadComponent() {
     }
 
     const checkIfSizeExceedsStorageQuota = () => {
-        if(file.size + data.storageQuota > 100){
+        if((file!.size + data!.storageQuota) > 100){
             //código para não deixar fazer upload se passar da quantidade de armaz.
         }
     }
