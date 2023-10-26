@@ -11,7 +11,14 @@ export default function HeaderComponent() {
     const navigate = useNavigate();
 
     const handleNewFolder = () => {
-      let folderName: string = prompt("insira o nome da pasta")!;
+      let folderName: string = () => {
+        const isElectron = window && window.process && window.process.type === 'renderer';
+
+        if (isElectron)
+            return "Sem Título";
+        
+        return prompt("insira o nome da pasta")!;
+      }
 
       if (folderName != "") {
         const folder = {
