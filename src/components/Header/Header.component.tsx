@@ -12,7 +12,7 @@ export default function HeaderComponent() {
 
     const handleNewFolder = () => {
         const getFolderName = (): string => {
-        const isElectron = window && window.process && window.process.type === 'renderer';
+        const isElectron = window && window.process && window.process?.type === 'renderer';
 
         if (isElectron)
             return "Sem Título";
