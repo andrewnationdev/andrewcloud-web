@@ -57,10 +57,17 @@ export default function FileUploadComponent() {
         setFile(null);
     }
 
+    const checkIfSizeExceedsStorageQuota = () => {
+        if(file.size + data.storageQuota > 100){
+            //código para não deixar fazer upload se passar da quantidade de armaz.
+        }
+    }
+
     useEffect(() => {
         console.log(file);
         if (file) {
             try {
+                checkIfSizeExceedsStorageQuota();
                 simulateUpload();
             } catch(err){
                 notify(`Ops, ocorreu um problema: ${err}`);
@@ -82,8 +89,6 @@ export default function FileUploadComponent() {
                 <i className="material-icons left">archive</i>
                 Enviar arquivo
             </a>
-            {file?.name && <span>Enviando {file?.name} - {timeEstimate}</span>}
-            {file?.name && <progress value={uploadProgress} max={100} ></progress>}
             <input type="file" onChange={(e) => {
                 const file = e.target.files && e.target.files[0];
 
@@ -93,3 +98,9 @@ export default function FileUploadComponent() {
         </div>
     )
 }
+
+/**
+ *             {file?.name && <span>Enviando {file?.name} - {timeEstimate}</span>}
+            {file?.name && <progress value={uploadProgress} max={100} ></progress>}
+ * 
+ */
